@@ -1,0 +1,141 @@
+/* Full Page Layout */
+.contact-wrapper {
+  height: 100vh;
+  width: 100%;
+  background: rgb(255 211 221 / 57%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* MAIN CARD */
+.contact-card {
+  width: 950px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+  display: flex;
+  overflow: hidden; /* FIX: prevents overlay */
+  position: relative;
+  z-index: 1;
+}
+
+/* LEFT SECTION */
+.contact-info {
+  width: 40%;
+  background: #ffe6ee;
+  padding: 30px 25px;
+  text-align: center;
+  position: relative;
+  z-index: 2; /* ensures no overlapping */
+}
+
+.contact-info img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  pointer-events: auto; /* CLICK FIX */
+  cursor: pointer;
+}
+
+.contact-info h2 {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.contact-info p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  background: white;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #444;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  pointer-events: auto; /* CLICK FIX */
+}
+
+/* RIGHT SECTION */
+.contact-form-area {
+  width: 60%;
+  padding: 40px 35px;
+  position: relative;
+  z-index: 3; /* Always above left area properly */
+}
+
+.contact-form-area h1 {
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+
+/* Row of 2 Inputs */
+.field-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 15px;
+  background: white;
+  pointer-events: auto; /* CLICK FIX */
+  cursor: text;
+}
+
+input:focus, textarea:focus {
+  border-color: #ff5c8d;
+  box-shadow: 0 0 5px rgba(255,92,141,0.3);
+}
+
+textarea {
+  resize: none;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.send-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #ff5c8d;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.send-btn:hover {
+  background: #e24c7a;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-card {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contact-info,
+  .contact-form-area {
+    width: 100%;
+  }
+
+  .field-row {
+    flex-direction: column;
+  }
+}

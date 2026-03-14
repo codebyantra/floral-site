@@ -1,0 +1,122 @@
+.login-page {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: #ffe6eb;
+}
+
+/* LEFT SIDE */
+.left-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;   /* <--- important */
+}
+
+.astro-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* <--- important: image overlap nahi karegi */
+  pointer-events: none; /* <--- image click block nahi karegi */
+display: block;
+}
+
+.left-section h2 {
+  font-size: 24px;
+  color: #ffe6eb;
+}
+
+.left-section p {
+  width: 70%;
+  color: #ffe6eb;
+  font-size: 14px;
+}
+
+/* RIGHT SIDE */
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;  /* <--- makes sure this appears above left side */
+  z-index: 10;
+}
+
+.login-box {
+  width: 75%;
+  max-width: 380px;
+  padding: 35px;
+  z-index: 20;
+}
+
+.login-box h1 {
+  text-align: center;
+  color:#3e1e1e;
+  font-weight: 500;
+  z-index: 10000;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #d6c2e2;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background:#d9a8ac;
+  color: #3e1e1e;
+  border-radius: 6px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-btn:hover {
+  background: #d9a8ac;
+}
+
+/* SOCIAL BUTTONS */
+.social-login {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.google-btn,
+.fb-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #f6b7c4;
+}
+
+.google-btn:hover,
+.fb-btn:hover {
+  background: hsl(348, 57%, 76%);
+}
+
+.signup-text {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.signup-text a {
+  color:#3e1e1e;
+  font-weight: bold;
+}

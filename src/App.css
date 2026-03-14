@@ -1,0 +1,32 @@
+.app-bg {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+
+  /* 🖼️ Background Image Setup */
+  background-image: url("./assets/flowers-bg.jpg"); /* adjust path if needed */
+  background-size: cover;         /* image always covers full screen */
+  background-position: center;    /* keeps subject centered */
+  background-repeat: no-repeat;   /* no tiling */
+  background-attachment: absolute;   /* 👈 keeps image fixed while scrolling */
+}
+
+/* Optional: soft overlay for readability (remove if you want pure image) */
+.app-bg::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25); /* light blur effect overlay */
+  z-index: 0;
+}
+
+/* Ensure all page sections appear ABOVE the background */
+section, footer, header, main {
+  position: relative;
+  z-index: 1;
+  background: transparent; /* no blocky backgrounds */
+}

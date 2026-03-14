@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 60px;
+  color: #3e1e1e;
+  flex-wrap: wrap;
+  z-index: 2;
+  position: relative; /* needed for ::before to position correctly */
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70vw; /* adjust width (shorter or longer line) */
+  height: 2px;
+  background-color: #000;
+}
+
+.footer-col h4 {
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.footer-col p {
+  font-size: 13px;
+  margin: 5px 0;
+}
